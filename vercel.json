@@ -1,18 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "https://neuerung.vercel.app"
+    },
     {
       "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "neuerung.in"
-        }
-      ],
-      "destination": "https://www.neuerung.in/:path*",
-      "permanent": true
+      "destination": "https://neuerung.vercel.app/:path*"
     }
   ]
 }
